@@ -5,7 +5,7 @@ rm -rf grading-area
 
 mkdir grading-area
 
-git clone $1 student-submission > ta-output.txt
+git clone $1 student-submission 2> ta-output.txt
 echo 'Finished cloning'
 
 
@@ -24,7 +24,7 @@ cp -r lib grading-area
 
 cd grading-area
 pwd
-javac -cp $CPATH *.java
+javac -cp $CPATH *.java 
 if [[ $? -ne 0 ]]
 then 
     echo "Compliation Error"
