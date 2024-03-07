@@ -9,7 +9,6 @@ git clone $1 student-submission 2> ta-output.txt
 echo 'Finished cloning'
 
 
-pwd
 if ! [[ -f student-submission/ListExamples.java ]]
 then 
     echo "Missing Necessary Files"
@@ -23,7 +22,6 @@ cp -r lib grading-area
 
 
 cd grading-area
-pwd
 javac -cp $CPATH *.java 
 if [[ $? -ne 0 ]]
 then 
